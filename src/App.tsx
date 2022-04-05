@@ -1,7 +1,9 @@
+import SignUp from "./components/signUp/index";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <SignUp />
     </div>
   );
 }
