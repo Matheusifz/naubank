@@ -26,10 +26,15 @@ const SignUp: React.FC = () => {
         setEmail("");
         setPassword("");
         setMessage("User created successfully");
-      } else {
+      }
+      if (res.status === 400) {
+        setMessage("All input are required");
+      }
+      if (res.status === 401) {
         setMessage("Email is already in use. Please Log In");
       }
-    } catch (err) {
+    } catch (err: any) {
+      setMessage(err);
       console.log(err);
     }
   };
